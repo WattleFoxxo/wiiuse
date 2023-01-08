@@ -32,7 +32,7 @@ set(API
 
 if(WIN32)
 	list(APPEND SOURCES os_win.c)
-	set(CMAKE_DEBUG_POSTFIX _debug)
+	set(CMAKE_RELEASE_POSTFIX _release)
 elseif(APPLE)
 	set(MAC_OBJC_SOURCES
 		os_mac/os_mac.m
