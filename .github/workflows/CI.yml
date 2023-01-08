@@ -22,3 +22,15 @@ jobs:
         run: |
           cmake -B build-static
           cmake --build build-static
+      - name: 'Upload Artifact 1'
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: wiiuse dll
+          path: D:\a\wiiuse\wiiuse\build-shared\src\Debug\wiiuse.dll
+          retention-days: 5
+      - name: 'Upload Artifact 2'
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: wiiuse lib
+          path: D:\a\wiiuse\wiiuse\build-static\src\Debug\wiiuse.lib
+          retention-days: 5
