@@ -86,7 +86,7 @@ set_property(TARGET
 	${API})
 
 set_property(TARGET wiiuse APPEND PROPERTY
-  COMPILE_DEFINITIONS $<$<CONFIG:Debug>:WITH_WIIUSE_DEBUG>
+  COMPILE_DEFINITIONS $<$<CONFIG:Release>:WITH_WIIUSE_RELEASE>
 )
 
 set_target_properties(wiiuse PROPERTIES
